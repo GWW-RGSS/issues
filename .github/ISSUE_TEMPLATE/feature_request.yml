@@ -1,0 +1,48 @@
+name: Feature request
+description: Suggest a new feature or an improvement.
+title: "[Feature]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Frontend / website
+        - Backend / API
+        - Admin panel
+        - Documentation
+        - Other
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Affected project or page
+      description: Which project or part of the website is this suggestion for?
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe who would benefit and what they are trying to do.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed improvement
+      description: Explain how you would like it to work.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any workarounds or other approaches.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add examples or screenshots that help explain your suggestion.
