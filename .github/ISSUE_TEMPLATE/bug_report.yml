@@ -1,0 +1,58 @@
+name: Bug report
+description: Report something that is broken or not working as expected.
+title: "[Bug]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Frontend / website
+        - Backend / API
+        - Admin panel
+        - Documentation
+        - Other
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Affected project or page
+      description: Provide the project name or page URL. Remove any private URL parameters.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and any error messages.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What should have happened?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device and browser
+      placeholder: "Example: Windows 10, Chrome; Android tablet, Firefox"
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots and additional details
+      description: Remove personal information, passwords, tokens, and classroom codes before attaching screenshots or logs.
